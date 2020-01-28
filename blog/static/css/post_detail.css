@@ -1,0 +1,26 @@
+.post-detail{
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+    column-gap: 20px;
+}
+
+.post-body .body{
+    margin: 60px 20px 40px 60px;
+}
+
+.body h1{
+    font-size: 48px;
+    font-weight: 900;
+    padding: 35px 0px;
+}
+.body p{
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 900px){
+    .post-detail{
+        display: block;
+    }
+}

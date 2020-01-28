@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    box-sizing: border-box;
+    margin: 0px;
+    overflow-x: hidden;
+    color: rgb(49, 49, 49);
+}
+
+/* Header */
+nav{
+    width: 80%;
+    padding: 10px 20px;
+}
+
+/* Mobile Menu */
+
+.nav-bar{
+     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-bar .item{
+    font-size: 16px;
+    padding: 15px 20px;
+}
+
+.nav-bar .item a{
+    display: block;
+    text-decoration: none;
+    color: #252525;
+}
+.item a:hover{
+    color: rgb(113, 14, 179)
+}
+.brand a{
+    text-decoration: none;
+    font-size: 32px;
+}
+.brand a span{
+    color: #252525;
+}
+
+.toggle i{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(113, 14, 179);
+}
+
+.item{
+    order: 2;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+.toggle{
+    cursor: pointer;
+    order: 1;
+}
+.item.active{
+    display: block;
+}
+
+/* Tab Menu */
+@media all and (min-width: 468px){
+    .nav-bar{
+        justify-content: center;
+    }
+    .brand{
+        flex: 1;
+    }
+}
+@media all and (min-width: 768px){
+    .item{
+        display: block;
+        width: auto;
+    }
+    .toggle{
+        display: none;
+    }
+    .nav-bar li{
+        padding: 15px 20px;
+    }
+}
+/* Footer */
+footer{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background-color: #0e0d0d;
+    color: white;
+}
+
+/* Post Card */
+
+.post-card{
+    width: 100%;
+    height: 500px;
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(44, 39, 48, 0.4);
+    border-radius: 10px;
+}
+
+.post-image{
+    background-color: #7c7c7c;
+    width: 100%;
+    height: 200px;
+}
+
+.post-content{
+    text-align: center;
+}
+
+.post-content h2{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.post-content p{
+    color: rgb(78, 78, 78);
+}
+
+.post-content a{
+    text-decoration: none;
+    padding: 12px 16px;
+    background-color: #222;
+    color: white;
+}

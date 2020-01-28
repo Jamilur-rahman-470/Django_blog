@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<!--Home Page-->
+<html>
+
+<head>
+    <title>Home | Jr Developes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Global Style -->
+    <link type="text/css" rel="stylesheet" href="{% static '/css/main.css' %}">
+    <!-- Local Style -->
+    <link type="text/css" rel="stylesheet" href="{% static '/css/home.css' %}">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/b6099a24df.js" crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul class="nav-bar">
+                <li class="brand">
+                    <a href="#"><span>Log</span>o</a>
+                </li>
+                <li class="item">
+                    <a class="nav-links" href="#">HOME</a class="nav-links">
+                </li>
+                <li class="item">
+                    <a class="nav-links" href="blog/">BLOG</a>
+                </li>
+                <li class="item">
+                    <a class="nav-links" href="about/">ABOUT US</a>
+                </li>
+                <li class="item">
+                    <a class="nav-links" href="contact/">CONTACT</a>
+                </li>
+                <li class="toggle">
+                    <i class="fas fa-bars"href="#"></i>
+                </li>
+            </ul>
+        </nav> 
+    </header>
+    <!-- Main Section -->
+    <main>
+        <section class="banner">
+            <div class="container">
+                <svg viewBox="0 0 960 300">
+                    <symbol id="s-text">
+                        <text text-anchor="middle" x="50%" y="80%">{{banner.name}}</text>
+                    </symbol>
+
+                    <g class="g-ants">
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                    </g>
+                </svg>
+                <h2>
+                    <span>{{banner.txt1}}, </span>
+                    <span>{{banner.txt2}} </span>
+                    <span>{{banner.txt3}} </span>
+                </h2>
+                <div class="btn">
+                    <a href="/blog/">BLOG</a>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <div class="blog-header">
+                <h1>Recent Posts</h1>
+            </div>
+            <div class="blogs">
+                {%if posts %}
+                {% for post in posts %}
+                <div class="post-card">
+                    <div class="post-image"></div>
+                    <div class="post-content">
+                        <h2>{{post.title}}</h2>
+                        <br>
+                        <p>{{post.excrept}}</p>
+                        <br>
+                        <a href="{% url 'post_detail' post.slug  %}" class="read-more">Read More</a>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </section>
+    </main>
+    <!--Footer Section-->
+    <footer>
+        <p>Dveloped by Md. Jamilur Rahman@ Jr Devs</p>
+    </footer>
+    <script src="{% static '/js/main.js'%}"></script>
+    
+</body>
+
+</html>
