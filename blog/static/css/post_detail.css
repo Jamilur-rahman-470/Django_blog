@@ -19,6 +19,12 @@
     font-weight: 400;
 }
 
+.post-thumb{
+    width: 80%;
+    height: 500px;
+    margin: auto;
+}
+
 @media screen and (max-width: 900px){
     .post-detail{
         display: block;

@@ -16,6 +16,6 @@ class Posts(models.Model):
     body = RichTextField()
     date = models.DateField(auto_now=True)
     author = models.CharField(max_length=50)
-
+    thumb = models.ImageField(default= False, upload_to= 'media/')
     def __str__(self):
         return self.title
