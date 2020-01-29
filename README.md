@@ -19,34 +19,34 @@ Basic Structure for a blog app with Django. The purpose of this repo is to provi
 
 1. clone this repo from the link below
 
-https://github.com/Jamilur-rahman-470/Django_blog.git
+<dl>https://github.com/Jamilur-rahman-470/Django_blog.git</dl>
 
 2. Install django-ckeditor, Pillow
 
-pip install Pillow
+<dl>pip install Pillow </dl>
 
 
-pip install django-ckeditor
+<dl>pip install django-ckeditor<dl>
 
 
 3. Make migration
 
 to make migration cd into manage.py directory and migrate with
 
-python manage.py makemigrations pages
+<dl>python manage.py makemigrations pages</dl>
 
 and
 
-python manage.py migrate
+<dl>python manage.py migrate</dl>
 
 
 4. Create Super User by
 
-python manage.py createsuperuser
+<dl>python manage.py createsuperuser</dl>
 
 5. Run the sever
 
-python manage.py runserver
+<dl>python manage.py runserver</dl>
 
 
 ![Screenshot (42)](https://user-images.githubusercontent.com/33858136/73357449-9771d900-42c6-11ea-862c-13d2bc1eeb89.png)
